@@ -14,7 +14,6 @@ class FreeradiusServer3 < Formula
   depends_on 'postgresql' => :optional # rlm_sql
   depends_on 'sqlite'     => :optional # rlm_sql
   depends_on 'unixodbc'   => :optional # rlm_sql
-  depends_on 'libiodbc'   => :optional # rlm_sql
   depends_on 'freetds'    => :optional # rlm_sql
   depends_on 'gdbm'       => :optional # rlm_ippool
   depends_on 'json-c'     => :optional # rlm_rest
@@ -29,6 +28,7 @@ class FreeradiusServer3 < Formula
                           "--without-rlm_eap_tnc",
                           "--without-rlm_sql_db2",
                           "--without-rlm_sql_firebird",
+                          "--without-rlm-sql_iodbc",
                           "--without-rlm_sql_oracle",
                           "--without-rlm_securid"
     system "make"

@@ -28,7 +28,7 @@ class FreeradiusServer3 < Formula
                           "--without-rlm_eap_tnc",
                           "--without-rlm_sql_db2",
                           "--without-rlm_sql_firebird",
-                          "--without-rlm-sql_iodbc",
+                          "--without-rlm_sql_iodbc",
                           "--without-rlm_sql_oracle",
                           "--without-rlm_securid"
     system "make"

@@ -2,9 +2,9 @@ require "formula"
 
 class FreeradiusServer3 < Formula
   homepage "http://freeradius.org/"
-  url "ftp://ftp.freeradius.org/pub/freeradius/freeradius-server-3.0.4.tar.gz"
-  sha256 "56919b25d5b2ff301cb37278494498f35d8c58986c33d693d6c0cd757a4a1fe9"
-  sha1 "16069ab9ceccfb5fc6a2710ea24fac99d96e42e8"
+  url "ftp://ftp.freeradius.org/pub/freeradius/freeradius-server-3.0.7.tar.gz"
+  sha256 "6d4d2f5cd9e8ca49da66f8a1e706eaad791be342d7f89fbfa167a6b648028ded"
+  sha1 "1fdcced1bd456f26a92e77973e095f3292b7d42e"
 
   # needs talloc and openssl
   depends_on "talloc"
@@ -35,6 +35,8 @@ class FreeradiusServer3 < Formula
 
     args = %W[
       --prefix=#{prefix}
+      --with-openssl-lib-dir=/usr/local/opt/openssl/lib
+      --with-openssl-include-dir=/usr/local/opt/openssl/include
       --without-rlm_eap_ikev2
       --without-rlm_eap_tnc
       --without-rlm_sql_db2

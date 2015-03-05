@@ -9,6 +9,7 @@ class FreeradiusServer3 < Formula
   # needs talloc and openssl
   depends_on "talloc"
   depends_on "openssl"
+  depends_on "pcre"
 
   # optional depends for modules
   depends_on "mysql"        => :optional # rlm_sql
@@ -37,6 +38,8 @@ class FreeradiusServer3 < Formula
       --prefix=#{prefix}
       --with-openssl-lib-dir=/usr/local/opt/openssl/lib
       --with-openssl-include-dir=/usr/local/opt/openssl/include
+      --with-pcre-lib-dir=/usr/local/opt/pcre/lib
+      --with-pcre-include-dir=/usr/local/opt/pcre/include
       --without-rlm_eap_ikev2
       --without-rlm_eap_tnc
       --without-rlm_sql_db2
